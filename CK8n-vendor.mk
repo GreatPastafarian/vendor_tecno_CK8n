@@ -33,6 +33,8 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/CK8n/proprietary/system/lib64/libvcodec_cap.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_cap.so \
     vendor/tecno/CK8n/proprietary/system/lib64/libvcodec_capenc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvcodec_capenc.so \
     vendor/tecno/CK8n/proprietary/system/lib64/libvt_avsync.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvt_avsync.so \
+    vendor/tecno/CK8n/proprietary/system/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so \
+    vendor/tecno/CK8n/proprietary/system/lib64/vendor.mediatek.hardware.videotelephony@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.mediatek.hardware.videotelephony@1.0.so \
     vendor/tecno/CK8n/proprietary/system_ext/lib64/libArcFilter.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libArcFilter.so \
     vendor/tecno/CK8n/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.drbin \
     vendor/tecno/CK8n/proprietary/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin:$(TARGET_COPY_OUT_VENDOR)/app/mcRegistry/020f0000000000000000000000000000.tlbin \
@@ -2139,7 +2141,6 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/CK8n/proprietary/vendor/lib64/gc02m1macro_mipi_raw_IdxMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gc02m1macro_mipi_raw_IdxMgr.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/gc02m1macro_mipi_raw_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gc02m1macro_mipi_raw_tuning.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
-    vendor/tecno/CK8n/proprietary/vendor/lib64/hw/android.hardware.camera.device@3.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.device@3.6.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss-impl-mediatek.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so \
@@ -2443,6 +2444,7 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libImageEval.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libImageEval.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libJpgEncPipe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libJpgEncPipe.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libMcClient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMcClient.so \
+    vendor/tecno/CK8n/proprietary/vendor/lib64/libMegviiHum.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMegviiHum.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libMtkOmxCore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkOmxCore.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libMtkSpeechEnh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkSpeechEnh.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libNoFpsActor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libNoFpsActor.so \
@@ -2526,8 +2528,6 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libapu_mdw_batch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapu_mdw_batch.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libapusys.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapusys.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libapusys_edma.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapusys_edma.so \
-    vendor/tecno/CK8n/proprietary/vendor/lib64/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_high_dynamic_range.so \
-    vendor/tecno/CK8n/proprietary/vendor/lib64/libarcsoft_low_light_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_low_light_hdr.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libarcsoft_night_hawk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_night_hawk.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libarcsoft_torch_portrait_night.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_torch_portrait_night.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libarmnn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarmnn.so \
@@ -2653,9 +2653,6 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libdtsdsec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdtsdsec.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libeffect_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffect_hal.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libeffecthal.base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffecthal.base.so \
-    vendor/tecno/CK8n/proprietary/vendor/lib64/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffectproxy.so \
-    vendor/tecno/CK8n/proprietary/vendor/lib64/libeffects.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffects.so \
-    vendor/tecno/CK8n/proprietary/vendor/lib64/libeffectsconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffectsconfig.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libeyedetector.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeyedetector.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libfacesattribute.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfacesattribute.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libfeature.face.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfeature.face.so \
@@ -2848,7 +2845,6 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libtlcWidevineModularDrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlcWidevineModularDrm.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libtneclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtneclient.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libtnev.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtnev.so \
-    vendor/tecno/CK8n/proprietary/vendor/lib64/libtran_sensorhub_oismgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtran_sensorhub_oismgr.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libtranlog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranlog.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libtranslator_mapi_v3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_mapi_v3.0.so \
     vendor/tecno/CK8n/proprietary/vendor/lib64/libtranslator_mdmi_v2.8.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtranslator_mdmi_v2.8.2.so \
